@@ -38,3 +38,59 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+
+# 🚀 Journey Builder
+
+A modular, extensible React application to visualize and configure a **Journey Builder DAG** with forms and dynamic prefill mappings.  
+Built with a focus on **clean architecture**, **reusable components**, and **modern React best practices**.
+
+---
+
+## ✨ Features
+
+✅ Visualize forms as a **Directed Acyclic Graph (DAG)**  
+✅ Inspect and configure field-level prefill mappings  
+✅ Modular, **reusable components** (`JourneyBuilder`, `FormDAG`, `PrefillConfiguration`)  
+✅ Dynamically processes form schemas and normalizes data structures  
+✅ Fully type-safe with **TypeScript interfaces**  
+✅ Designed for **extensibility** and easy integration with real data sources
+
+---
+
+## 📂 Code Organization
+
+- **Clear separation of concerns:**  
+  State management and data processing logic live in the parent container (`JourneyBuilder`) while presentation and user interactions are handled by child components.
+- **Well-defined interfaces:**  
+  All props and data structures are strongly typed using TypeScript interfaces.
+- **Thoughtful hierarchy & composition:**  
+  Components are designed to be independent and composable for reuse in other contexts.
+
+---
+
+## 🧪 Tests
+
+The project is structured to easily support tests written with:
+- [Jest](https://jestjs.io/)
+- [React Testing Library](https://testing-library.com/)
+
+Recommended test coverage:
+- Component rendering and prop handling
+- Form selection and prefill mapping logic
+- Data normalization in `useEffect`
+
+🔌 How to Extend
+Add new data sources or forms
+Open: src/mockData/formData.ts
+
+Update:
+
+mockFormDAGResponse.nodes → add DAG nodes
+
+mockFormDAGResponse.forms → define forms with field_schema
+
+initialPrefillConfig → define default prefill mappings
+
+Integrate real APIs
+Replace the mock data import in JourneyBuilder.tsx with a fetch() or Axios call in useEffect, then set the state as shown.
+
