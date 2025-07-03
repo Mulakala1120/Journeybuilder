@@ -94,3 +94,5 @@ initialPrefillConfig → define default prefill mappings
 Integrate real APIs
 Replace the mock data import in JourneyBuilder.tsx with a fetch() or Axios call in useEffect, then set the state as shown.
 
+View in Browser
+Once the development server is running, open your browser and navigate to: [http://localhost:3000](http://localhost:3000)
